@@ -1,4 +1,5 @@
 /* 
+III.
 1. Dans JavaScript, sélectionnez la div #app.
 2. Ajoutez dynamiquement un titre (<h2>). 
 */
@@ -34,6 +35,7 @@ images.forEach((url, index) => {
 app.appendChild(gallery);
 
 /*
+IV.
 1. Rendez chaque image cliquable grâce à addEventListener avec une fonction anonyme.
 2. Lors d’un clic :
 - Affichez l’adresse (src) de l’image avec getAttribute.
@@ -50,6 +52,7 @@ imgs.forEach((img) => {
 });
 
 /*
+V.
 1. Ajoutez dynamiquement un bouton "Lancer le diaporama".
 2. Au clic sur ce bouton, démarrez un diaporama :
     - Toutes les 2 secondes (setInterval), une image différente doit être mise en avant (par exemple, avec une bordure bleue).
@@ -80,6 +83,7 @@ button.addEventListener("click", function() {
 
 
 /* 
+VI.
 1. Ajouter une nouvelle image :
     - Créez un champ texte et un bouton "Ajouter une image".
     - Quand l’utilisateur saisit une URL et clique sur le bouton, une nouvelle image est insérée dans la galerie.
@@ -130,14 +134,15 @@ pauseButton.addEventListener("click", function() {
 
 /* 
 3. Gestion par classes CSS :
-    - Créez une classe CSS .highlight qui applique une bordure.
     - Utilisez .classList.add() et .classList.toggle() en JavaScript pour gérer les styles au lieu de modifier directement .style.
 */
-
-
-
-
-
+imgs.forEach((img) => {
+    img.addEventListener("click", function() {
+        const src = this.getAttribute("src");
+        alert("URL de l'image : " + src);
+        this.classList.add("highlight");
+    });
+});
 
 // Récupération et affichage du nombre de boutons dans la console
 const buttons = document.getElementsByTagName("button");

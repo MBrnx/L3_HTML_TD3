@@ -1,0 +1,11 @@
+/*
+VI.
+3. Gestion par classes CSS :
+ - Créez une classe CSS .highlight qui applique une bordure.
+ - Utilisez .classList.add() et .classList.toggle() en JavaScript pour gérer les styles au lieu de modifier
+directement .style.border.
+*/
+
+.highlight {
+    border: 5px solid red !important;
+}
